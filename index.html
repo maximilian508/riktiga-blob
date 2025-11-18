@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Blob City Online</title>
+  <style>
+    body { margin:0; overflow:hidden; }
+    #ui { position:absolute; top:10px; left:10px; color:white; font-family:sans-serif; font-size:20px; z-index:10; }
+    #shop { position:absolute; top:60px; left:10px; background:#0008; padding:10px; border-radius:8px; color:white; display:none; }
+    #touch { position:absolute; bottom:20px; left:20px; width:120px; height:120px; border:2px solid white; border-radius:50%; }
+  </style>
+</head>
+<body>
+
+<div id="ui">
+  <div>ID: <span id="userid">Loading...</span></div>
+  <div>Blobs: <span id="blobcoins">0</span></div>
+  <button onclick="sellBlob()">SÄLJ</button>
+  <button onclick="toggleShop()">SHOP</button>
+</div>
+
+<div id="shop">
+  <h3>Skins</h3>
+  <button onclick="buySkin('guld')">Guld – 200 blobs</button><br><br>
+  <button onclick="buySkin('grön')">Grön – 200 blobs</button><br><br>
+  <button onclick="buySkin('svart')">Svart – 200 blobs</button>
+</div>
+
+<div id="touch"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+<script>
+
+const SUPABASE_URL = "https://bxdldthlvakprngixxex.supabase.co"
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4ZGxkdGhsdmFrcHJuZ2l4eGV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM0NDI2NjAsImV4cCI6MjA3OTAxODY2MH0.zq_ORmymhWOiWKj7kZqKhX0Ibh7hOQVEox0bMO0Gw_c"
+  process.env.SUPABASE_KEY"
