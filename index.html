@@ -33,6 +33,8 @@
 
 <script>
 
-const SUPABASE_URL = "https://bxdldthlvakprngixxex.supabase.co"
+const SUPABASE_URL = "https://bxdldthlvakprngixxex.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4ZGxkdGhsdmFrcHJuZ2l4eGV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM0NDI2NjAsImV4cCI6MjA3OTAxODY2MH0.zq_ORmymhWOiWKj7kZqKhX0Ibh7hOQVEox0bMO0Gw_c"
-  process.env.SUPABASE_KEY"
+  process.env.SUPABASE_KEY";
+
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
